@@ -8,7 +8,7 @@ DB_CONFIG = {
 }
 
 # Directory containing Excel files
-DIRECTORY_PATH = r"D:\liberty_automation"
+DIRECTORY_PATH = r"xxxxx"
 
 # Logging configuration
 LOG_FILE = "excel_to_postgres.log"
