@@ -2,7 +2,7 @@
 DB_CONFIG = {
     "db_name": "postgres",          # Database name
     "db_user": "postgres",          # Database user
-    "db_password": "Berwin@97",          # Replace with your database password
+    "db_password": "xxxxxx",          # Replace with your database password
     "db_host": "localhost",         # Hostname or IP address
     "db_port": "5432",              # Default PostgreSQL port
 }
