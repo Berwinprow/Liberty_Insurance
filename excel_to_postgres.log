@@ -1,0 +1,39 @@
+2025-01-29 15:38:56 - INFO - Found 4 files to process.
+2025-01-29 15:38:56 - INFO - Processing file 1 of 4: 2023 PR.xlsx
+2025-01-29 15:38:56 - INFO - Processing file: D:\liberty_automation\2023 PR.xlsx
+2025-01-29 15:48:04 - ERROR - Error processing file D:\liberty_automation\2023 PR.xlsx: (psycopg2.OperationalError) could not translate host name "97@localhost" to address: A non-recoverable error occurred during a database lookup. 
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-01-29 15:48:04 - INFO - Finished processing file 1 of 4: 2023 PR.xlsx
+2025-01-29 15:48:04 - INFO - Processing file 2 of 4: 2024 PR.xlsx
+2025-01-29 15:48:04 - INFO - Processing file: D:\liberty_automation\2024 PR.xlsx
+2025-01-29 15:53:14 - INFO - Found 4 files to process.
+2025-01-29 15:53:14 - INFO - Processing file 1 of 4: 2023 PR.xlsx
+2025-01-29 15:53:14 - INFO - Processing file: D:\liberty_automation\2023 PR.xlsx
+2025-01-29 16:01:25 - ERROR - Error processing file D:\liberty_automation\2023 PR.xlsx: (psycopg2.OperationalError) could not translate host name "97@localhost" to address: A non-recoverable error occurred during a database lookup. 
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-01-29 16:01:25 - INFO - Finished processing file 1 of 4: 2023 PR.xlsx
+2025-01-29 16:01:25 - INFO - Processing file 2 of 4: 2024 PR.xlsx
+2025-01-29 16:01:25 - INFO - Processing file: D:\liberty_automation\2024 PR.xlsx
+2025-01-29 16:05:26 - INFO - Found 4 files to process.
+2025-01-29 16:05:26 - INFO - Processing file 1 of 4: 2023 PR.xlsx
+2025-01-29 16:05:26 - INFO - Processing file: D:\liberty_automation\2023 PR.xlsx
+2025-01-29 16:05:58 - INFO - Found 4 files to process.
+2025-01-29 16:05:58 - INFO - Processing file 1 of 4: 2023 PR.xlsx
+2025-01-29 16:05:58 - INFO - Processing file: D:\liberty_automation\2023 PR.xlsx
+2025-01-29 16:21:41 - INFO - Sheet 'Sheet1' uploaded to table '2023 PR_Sheet1' successfully.
+2025-01-29 16:21:41 - INFO - Finished processing file 1 of 4: 2023 PR.xlsx
+2025-01-29 16:21:41 - INFO - Processing file 2 of 4: 2024 PR.xlsx
+2025-01-29 16:21:41 - INFO - Processing file: D:\liberty_automation\2024 PR.xlsx
+2025-01-29 16:43:13 - INFO - Sheet 'Sheet1' uploaded to table '2024 PR_Sheet1' successfully.
+2025-01-29 16:43:13 - INFO - Finished processing file 2 of 4: 2024 PR.xlsx
+2025-01-29 16:43:13 - INFO - Processing file 3 of 4: Pvt Car Jan to  Nov 24.xlsb
+2025-01-29 16:43:13 - INFO - Processing file: D:\liberty_automation\Pvt Car Jan to  Nov 24.xlsb
+2025-01-29 16:59:50 - INFO - Sheet 'DATA' uploaded to table 'Pvt Car Jan to  Nov 24_DATA' successfully.
+2025-01-29 16:59:50 - INFO - Finished processing file 3 of 4: Pvt Car Jan to  Nov 24.xlsb
+2025-01-29 16:59:50 - INFO - Processing file 4 of 4: Pvt Car Jan'23 to  Dec 23 base Final.xlsb
+2025-01-29 16:59:50 - INFO - Processing file: D:\liberty_automation\Pvt Car Jan'23 to  Dec 23 base Final.xlsb
+2025-01-29 17:15:45 - INFO - Sheet 'DATA' uploaded to table 'Pvt Car Jan'23 to  Dec 23 base Final_DATA' successfully.
+2025-01-29 17:15:45 - INFO - Finished processing file 4 of 4: Pvt Car Jan'23 to  Dec 23 base Final.xlsb
+2025-01-29 17:15:45 - INFO - Batch processing completed successfully.
