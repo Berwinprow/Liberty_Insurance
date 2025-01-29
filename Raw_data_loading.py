@@ -3,22 +3,12 @@ import pandas as pd
 from sqlalchemy import create_engine
 import logging
 from urllib.parse import quote
-
-# PostgreSQL connection settings
-DB_NAME = "postgres"
-DB_USER = "postgres"
-DB_PASSWORD = "Berwin@97"  # Your password with special characters
-DB_HOST = "localhost"
-DB_PORT = "5432"  # Default PostgreSQL port
+from config import DB_CONFIG, DIRECTORY_PATH, LOG_FILE
 
 # URL encode the password
-encoded_password = quote(DB_PASSWORD)
-
-# Directory containing Excel files
-DIRECTORY_PATH = r"D:\liberty_automation"
+encoded_password = quote(DB_CONFIG["db_password"])
 
 # Set up logging
-LOG_FILE = "excel_to_postgres.log"
 logging.basicConfig(
     filename=LOG_FILE,
     level=logging.INFO,
@@ -27,7 +17,9 @@ logging.basicConfig(
 )
 
 # Connect to PostgreSQL
-engine = create_engine(f"postgresql+psycopg2://{DB_USER}:{encoded_password}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
+engine = create_engine(
+    f"postgresql+psycopg2://{DB_CONFIG['db_user']}:{encoded_password}@{DB_CONFIG['db_host']}:{DB_CONFIG['db_port']}/{DB_CONFIG['db_name']}"
+)
 
 # Function to process Excel files and upload them
 def process_excel_to_postgres(file_path):
