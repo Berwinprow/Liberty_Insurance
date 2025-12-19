@@ -1,0 +1,93 @@
+1. appended_base_and_pr = overall appended base and pr 
+
+2. public.basiccleaned_appended_base_and_pr = basic cleaning like handling total premium, policy tenure and duplicates (policy no, start date, end date)
+
+3. public.samechassisno_differregno = Same chessis number and different reg no
+
+4. public.dupclean_basiccleaned_appended_base_and_pr = cleaned duplicates based on chessis, engine, start date and end date (without corrected chassis and engine)
+
+5. cleanchassisengine_basiccleaned_appended_base_and_pr = corrected the chassis and engine number in the "public.basiccleaned_appended_base_and_pr"
+
+6. cleanchassisengine_samechassisno_differregno = corrected the chassis and engine number in the "public.samechassisno_differregno"
+
+7. dupclean_cleanchassisengine_basiccleaned_appended_base_and_pr = Handled the duplicates based on the 'Cleaned Chassis Number', 'Cleaned Engine Number', 'policy start date', 'policy end date' in the "cleanchassisengine_basiccleaned_appended_base_and_pr" 
+
+8. dupclean_cleanchassisengine_samechassisno_differregno = Handled the duplicates based on the 'Cleaned Chassis Number', 'Cleaned Engine Number', 'policy start date', 'policy end date' in the "cleanchassisengine_samechassisno_differregno"
+
+9. overallcleaned_chessis_engine  = Appended the file "dupclean_cleanchassisengine_basiccleaned_appended_base_and_pr" and "dupclean_cleanchassisengine_samechassisno_differregno"
+
+10. public.cleancus_overallcleaned_chessis_engine = Handled Null cases for insured name in the "overallcleaned_chessis_engine"
+
+11. corrected_cleancus_overallcleaned_chessis_engine = corrected customer name ("kaviyam G, G kaviyam) in the "public.cleancus_overallcleaned_chessis_engine"
+
+12. handled_bookedcase_base_pr = Handled Booked cases (marked 1.0, 0.0, 2.0) based on "Cleaned Chassis Number", "Cleaned Engine Number", "corrected_name" in the "corrected_cleancus_overallcleaned_chessis_engine"
+
+13. mapoldpolicy_handled_bookedcase_base_pr = Mapping Old policy number based on "Cleaned Chassis Number", "Cleaned Engine Number", "corrected_name" in the "handled_bookedcase_base_pr"
+
+14. overallcorrected_base_pr_claim = Merged the claim data to the "mapoldpolicy_handled_bookedcase_base_pr"
+
+15. overall_cleaned_base_and_pr_ef = Calculated external Factors in the "overallcorrected_base_pr_claim"
+
+16. public.state_zone_dim = zone wise dim table
+
+17. overall_cleaned_base_and_pr_ef_policyef = add 2 more external features from public.overall_cleaned_base_and_pr_ef
+
+
+
+Same start date and end date - same chessis number incase base data present  
+
+1. I removed the rows containing same chessis number and different reg no = 224371
+
+2. sepeareted the data containing null cases in chassis and engine
+
+3. 3000 policies having same policy number but different customer name
+2306958
+
+
+['policy no', 'premium payable without ncb', 'add on eligibilty (5th & 6th renewals with ncb)', 'total premium payable', 'product name', 
+'last year ncb', 'biztype', 'road side assistance', 'gst', 'chassis number', 'product name 2', 'oem discount category', 'key loss', 
+'before gst add-on gwp', 'age', 'nil depreciation', 'applicable discount without ncb', 'state3', 'passenger assist', 'oem category', 
+'total od premium', 'new vertical', 'renewed premium', 'zone 2', 'month', 'enginenumber', 'ncb amount', 'renewal ncb', 'total tp premium', 
+'policy number', 'policy end date', 'applicable discount with ncb', 'premium after discount', 'removing gst in add-on', 'booked date', 'zone 3', 
+'policy start date', 'discount category with ncb', 'decline', 'rto location', 'engine safe cover', 'renewal policy start date', 
+'premium before applicable tax', 'renewal notice generation date', 'od prem post ncb', 'invited premium', 'vehicle idv', 'consumable cover', 
+'new branch name', 'reg year bucket 2', 'renewal type', 'state2', 'tie up', 'vehicle segment', 'new branch name 2', 'manufacturer/make', 'model', 'data', 
+'ncb % previous year', 'insured name', 'fuel type', 'reg no', 'total add-on with gst', 'booked', 'claim in last year', 'hyundai discount status', 'old policy no', 
+'proposal/covernote issue date', 'vehicle zone name', 'detariff disc amount', 'lob name', 'net premium', 'start date of tp', 'product code', 'policy issue date', 
+'current year ncb (amount)', 'end date of od', 'end date of tp', 'road side assistance taken', 'start date of od', 'cubic capacity', 'current year ncb (%)', 'class name', 
+'proposal/covernote id', 'variant', 'Trim Policy No', 'Policy Tenure(check)', 'null_count', 'Cleaned insured name', 'Cleaned Branch Name 2', 'Cleaned State2', 'Cleaned Zone 2', 
+'Cleaned Chassis Number', 'Cleaned Engine Number', 'Cleaned Reg no', 'Cleaned insured name_filled', 'chassis_engine_key', 'corrected_name', 'name_similarity', 
+'next_policy_start_date', 'upd_booked', 'updated_old_policy_no', 'Policy Status', 'Claim No', 'Claim No (str)', 'Child Claim No', 'Insured Name_1', 'cleaned_insuredname', 
+'Policy No_1', 'Policy No (Str)', 'Total Sum Insured (Policy SI)', 'Interest Level', 'product', 'Policy Start Date_claim', 'Policy End Date_claim', 'Policy Issuance Branch', 
+'channel', 'Distribution Channel', 'IMD Code', 'Intermediary Name', 'Intermediary Branch', 'Loss Date', 'Notification Date', 'Nature of Loss', 'Cause of Loss', 
+'Status of Claim', 'Updated Status', 'Settle date', 'Settled Month', 'Loss Location', 'Claim processing Location', 'make', 'model_1', 'variant_1', 'Vehicle Registration No.', 
+'Engine NO', 'Chassis NO', 'Manf. Year', 'dat_registration_date', 'Claim Status', 'Number of claims', 'paid', 'withdrawn', 'CLOSURE OF CLAIM', 'repudiation', 'CLOSURE OF CLAIMS', 
+'approved', 'denied', 'Number of claims.1', 'con', 'non_unique_columns', 'customerid_base', 'customerid', 'Policy Tenure Month', 'Policy Tenure', 'Start Year', 'End Year', 
+'Cumulative Tenure (Months)', 'Tenure Decimal', 'Customer Tenure', 'firstpolicyyear', 'new_customer_id', 'New Customers', 'Churn Label', 'Claim Happaned/Not', 'Renewal Rate Status', 
+'new_chain_flag', 'chain_group', 'first_initial_policy_no', 'policy_wise_purchase', 'cleaned new vertical']
+
+2022:
+
+1. Matched old policy number(PR) = 2628
+2. Matched old policy number(Base) = 79334
+
+2024:
+
+1. Matched old policy number(PR) = 4042
+2. Matched Old Policy number = 
+
+2023:
+
+1. Matched old Policy number(Base) = 
+
+
+
+import os
+import torch
+from ultralytics import YOLO
+
+if __name__ == '__main__':
+    # Check if CUDA is available
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"Using device: {device}")
+

@@ -1,0 +1,803 @@
+Top 5 Splits per Feature per Class:
+====================================================================================================
+
+Feature: age
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - age <= 1.0025  (Count: 88)
+  - age <= 1.0038  (Count: 87)
+  - age > 1.0038  (Count: 53)
+  - age <= 2.0022  (Count: 38)
+  - age > 1.0025  (Count: 38)
+  - age <= 4.9959  (Count: 34)
+  - age > 13.1229  (Count: 28)
+  - age <= 2.0049  (Count: 25)
+  - age <= 1.0041  (Count: 25)
+  - age > 10.7968  (Count: 24)
+  - age <= 13.1229  (Count: 22)
+  - age > 2.0022  (Count: 20)
+  - age > 2.0036  (Count: 20)
+  - age > 7.9915  (Count: 20)
+  - age <= 10.7968  (Count: 19)
+
+Class 1:
+  - age > 1.0038  (Count: 112)
+  - age <= 1.0038  (Count: 78)
+  - age > 1.0025  (Count: 73)
+  - age > 2.0022  (Count: 38)
+  - age > 4.9959  (Count: 33)
+  - age <= 10.7968  (Count: 28)
+  - age <= 5.9981  (Count: 26)
+  - age <= 13.1229  (Count: 26)
+  - age > 6.4663  (Count: 24)
+  - age > 10.7968  (Count: 23)
+  - age > 4.9790  (Count: 22)
+  - age <= 2.0036  (Count: 21)
+  - age <= 2.0022  (Count: 20)
+  - age > 2.0049  (Count: 20)
+  - age > 3.5798  (Count: 20)
+
+====================================================================================================
+
+Feature: vehicle idv
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - vehicle idv > 405003.0000  (Count: 16)
+  - vehicle idv <= 389151.5000  (Count: 15)
+  - vehicle idv <= 405003.0000  (Count: 10)
+  - vehicle idv > 423179.0000  (Count: 10)
+  - vehicle idv <= 20000.0000  (Count: 9)
+  - vehicle idv > 389151.5000  (Count: 9)
+  - vehicle idv > 310532.0000  (Count: 9)
+  - vehicle idv > 2599905.0000  (Count: 9)
+  - vehicle idv <= 310532.0000  (Count: 8)
+  - vehicle idv <= 393179.0000  (Count: 8)
+  - vehicle idv > 1566710.0000  (Count: 8)
+  - vehicle idv <= 405002.5000  (Count: 7)
+  - vehicle idv <= 2599905.0000  (Count: 7)
+  - vehicle idv > 1090388.5000  (Count: 7)
+  - vehicle idv > 2399842.0000  (Count: 7)
+
+Class 1:
+  - vehicle idv <= 405003.0000  (Count: 22)
+  - vehicle idv > 20000.0000  (Count: 17)
+  - vehicle idv > 389151.5000  (Count: 17)
+  - vehicle idv > 405003.0000  (Count: 16)
+  - vehicle idv > 510021.5000  (Count: 14)
+  - vehicle idv <= 2399842.0000  (Count: 12)
+  - vehicle idv <= 389151.5000  (Count: 11)
+  - vehicle idv <= 1090388.5000  (Count: 11)
+  - vehicle idv <= 423179.0000  (Count: 11)
+  - vehicle idv <= 310532.0000  (Count: 10)
+  - vehicle idv > 405002.5000  (Count: 10)
+  - vehicle idv <= 405002.5000  (Count: 9)
+  - vehicle idv <= 2599905.0000  (Count: 9)
+  - vehicle idv > 2399842.0000  (Count: 9)
+  - vehicle idv <= 510021.5000  (Count: 8)
+
+====================================================================================================
+
+Feature: before gst add-on gwp
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - before gst add-on gwp <= 348.5000  (Count: 65)
+  - before gst add-on gwp <= 124.5000  (Count: 54)
+  - before gst add-on gwp > 348.5000  (Count: 48)
+  - before gst add-on gwp > 124.5000  (Count: 35)
+  - before gst add-on gwp <= 498.5000  (Count: 27)
+  - before gst add-on gwp > 6944.5000  (Count: 27)
+  - before gst add-on gwp <= 524.0000  (Count: 26)
+  - before gst add-on gwp <= 299.5000  (Count: 24)
+  - before gst add-on gwp <= 6944.5000  (Count: 23)
+  - before gst add-on gwp <= 324.5000  (Count: 22)
+  - before gst add-on gwp <= 9311.5000  (Count: 21)
+  - before gst add-on gwp > 9311.5000  (Count: 19)
+  - before gst add-on gwp > 324.5000  (Count: 18)
+  - before gst add-on gwp > 498.5000  (Count: 16)
+  - before gst add-on gwp > 524.0000  (Count: 15)
+
+Class 1:
+  - before gst add-on gwp > 348.5000  (Count: 101)
+  - before gst add-on gwp <= 348.5000  (Count: 77)
+  - before gst add-on gwp > 524.0000  (Count: 65)
+  - before gst add-on gwp > 124.5000  (Count: 64)
+  - before gst add-on gwp <= 524.0000  (Count: 54)
+  - before gst add-on gwp <= 124.5000  (Count: 45)
+  - before gst add-on gwp > 324.5000  (Count: 39)
+  - before gst add-on gwp <= 324.5000  (Count: 35)
+  - before gst add-on gwp > 299.5000  (Count: 33)
+  - before gst add-on gwp <= 6944.5000  (Count: 29)
+  - before gst add-on gwp > 498.5000  (Count: 27)
+  - before gst add-on gwp > 9311.5000  (Count: 27)
+  - before gst add-on gwp > 6944.5000  (Count: 25)
+  - before gst add-on gwp <= 299.5000  (Count: 21)
+  - before gst add-on gwp <= 9311.5000  (Count: 18)
+
+====================================================================================================
+
+Feature: total od premium
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - total od premium > 7476.5000  (Count: 22)
+  - total od premium > 469.5000  (Count: 22)
+  - total od premium > 470.5000  (Count: 20)
+  - total od premium <= 4688.5000  (Count: 17)
+  - total od premium <= 469.5000  (Count: 17)
+  - total od premium <= 470.5000  (Count: 16)
+  - total od premium > 7790.5000  (Count: 14)
+  - total od premium <= 7790.5000  (Count: 12)
+  - total od premium <= 1180.5000  (Count: 12)
+  - total od premium <= 7476.5000  (Count: 11)
+  - total od premium > 220.5000  (Count: 11)
+  - total od premium <= 3800.5000  (Count: 9)
+  - total od premium <= 5011.5000  (Count: 9)
+  - total od premium <= 50194.5000  (Count: 9)
+  - total od premium <= 12377.5000  (Count: 9)
+
+Class 1:
+  - total od premium <= 469.5000  (Count: 31)
+  - total od premium > 469.5000  (Count: 26)
+  - total od premium <= 7476.5000  (Count: 25)
+  - total od premium > 4688.5000  (Count: 23)
+  - total od premium <= 470.5000  (Count: 22)
+  - total od premium <= 7790.5000  (Count: 20)
+  - total od premium > 470.5000  (Count: 20)
+  - total od premium > 7790.5000  (Count: 18)
+  - total od premium <= 4688.5000  (Count: 15)
+  - total od premium > 220.5000  (Count: 15)
+  - total od premium > 7476.5000  (Count: 14)
+  - total od premium > 5819.5000  (Count: 13)
+  - total od premium <= 10774.5000  (Count: 11)
+  - total od premium <= 1729.0000  (Count: 11)
+  - total od premium <= 7226.0000  (Count: 11)
+
+====================================================================================================
+
+Feature: total tp premium
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - total tp premium > 3836.0000  (Count: 39)
+  - total tp premium <= 3836.0000  (Count: 27)
+  - total tp premium <= 8268.5000  (Count: 26)
+  - total tp premium > 3438.5000  (Count: 18)
+  - total tp premium > 8268.5000  (Count: 18)
+  - total tp premium > 2118.0000  (Count: 16)
+  - total tp premium <= 2118.0000  (Count: 15)
+  - total tp premium <= 3438.5000  (Count: 14)
+  - total tp premium <= 3413.5000  (Count: 13)
+  - total tp premium > 3413.5000  (Count: 10)
+  - total tp premium > 4053.5000  (Count: 10)
+  - total tp premium <= 3833.5000  (Count: 9)
+  - total tp premium <= 4053.5000  (Count: 9)
+  - total tp premium <= 8386.0000  (Count: 9)
+  - total tp premium <= 3788.5000  (Count: 9)
+
+Class 1:
+  - total tp premium <= 3836.0000  (Count: 41)
+  - total tp premium > 8268.5000  (Count: 30)
+  - total tp premium > 3836.0000  (Count: 29)
+  - total tp premium <= 8268.5000  (Count: 23)
+  - total tp premium > 2118.0000  (Count: 23)
+  - total tp premium <= 2118.0000  (Count: 22)
+  - total tp premium > 3413.5000  (Count: 22)
+  - total tp premium <= 3438.5000  (Count: 19)
+  - total tp premium <= 3413.5000  (Count: 19)
+  - total tp premium > 8386.0000  (Count: 16)
+  - total tp premium <= 8386.0000  (Count: 15)
+  - total tp premium > 3438.5000  (Count: 13)
+  - total tp premium > 3788.5000  (Count: 13)
+  - total tp premium <= 3819.8300  (Count: 10)
+  - total tp premium > 3833.5000  (Count: 10)
+
+====================================================================================================
+
+Feature: gst
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - gst > 327.5000  (Count: 13)
+  - gst <= 327.5000  (Count: 12)
+  - gst > 926.5000  (Count: 11)
+  - gst > 234.5000  (Count: 8)
+  - gst <= 2589.0000  (Count: 7)
+  - gst <= 797.5000  (Count: 7)
+  - gst <= 926.5000  (Count: 6)
+  - gst > 1281.5000  (Count: 6)
+  - gst > 797.5000  (Count: 6)
+  - gst <= 871.5000  (Count: 5)
+  - gst <= 234.5000  (Count: 4)
+  - gst > 2061.0000  (Count: 4)
+  - gst > 1762.1500  (Count: 4)
+  - gst > 2589.0000  (Count: 4)
+  - gst <= 473.5000  (Count: 3)
+
+Class 1:
+  - gst <= 1281.5000  (Count: 13)
+  - gst > 327.5000  (Count: 9)
+  - gst <= 926.5000  (Count: 8)
+  - gst <= 327.5000  (Count: 8)
+  - gst > 234.5000  (Count: 8)
+  - gst > 1281.5000  (Count: 6)
+  - gst > 1137.5000  (Count: 6)
+  - gst <= 9035.0000  (Count: 5)
+  - gst <= 1137.5000  (Count: 5)
+  - gst > 926.5000  (Count: 5)
+  - gst > 871.5000  (Count: 5)
+  - gst > 797.5000  (Count: 5)
+  - gst <= 502.0000  (Count: 4)
+  - gst <= 745.5000  (Count: 4)
+  - gst <= 797.5000  (Count: 4)
+
+====================================================================================================
+
+Feature: total premium payable
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - total premium payable > 7817.0000  (Count: 19)
+  - total premium payable <= 7817.0000  (Count: 16)
+  - total premium payable <= 4503.5000  (Count: 16)
+  - total premium payable > 8640.5000  (Count: 14)
+  - total premium payable <= 2426.5000  (Count: 13)
+  - total premium payable <= 8640.5000  (Count: 13)
+  - total premium payable > 4503.5000  (Count: 13)
+  - total premium payable > 6074.5000  (Count: 12)
+  - total premium payable <= 6074.5000  (Count: 9)
+  - total premium payable > 2145.5000  (Count: 9)
+  - total premium payable > 2426.5000  (Count: 9)
+  - total premium payable > 4379.5000  (Count: 9)
+  - total premium payable <= 2184.5000  (Count: 8)
+  - total premium payable <= 8692.5000  (Count: 7)
+  - total premium payable <= 2145.5000  (Count: 7)
+
+Class 1:
+  - total premium payable <= 7817.0000  (Count: 24)
+  - total premium payable > 7817.0000  (Count: 21)
+  - total premium payable <= 8640.5000  (Count: 18)
+  - total premium payable > 8640.5000  (Count: 18)
+  - total premium payable > 2426.5000  (Count: 16)
+  - total premium payable > 4503.5000  (Count: 15)
+  - total premium payable <= 2426.5000  (Count: 12)
+  - total premium payable <= 4503.5000  (Count: 12)
+  - total premium payable > 2145.5000  (Count: 10)
+  - total premium payable <= 6324.5000  (Count: 9)
+  - total premium payable <= 4379.5000  (Count: 9)
+  - total premium payable > 6324.5000  (Count: 9)
+  - total premium payable > 2184.5000  (Count: 9)
+  - total premium payable <= 8707.0000  (Count: 8)
+  - total premium payable > 5882.5000  (Count: 8)
+
+====================================================================================================
+
+Feature: ncb % previous year
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - ncb % previous year > 10.0000  (Count: 85)
+  - ncb % previous year <= 10.0000  (Count: 79)
+  - ncb % previous year > 30.0000  (Count: 71)
+  - ncb % previous year <= 30.0000  (Count: 60)
+  - ncb % previous year > 47.5000  (Count: 50)
+  - ncb % previous year <= 47.5000  (Count: 34)
+  - ncb % previous year <= 60.0000  (Count: 14)
+  - ncb % previous year > 40.0000  (Count: 14)
+  - ncb % previous year > 60.0000  (Count: 12)
+  - ncb % previous year <= 40.0000  (Count: 11)
+  - ncb % previous year > 22.5000  (Count: 11)
+  - ncb % previous year <= 22.5000  (Count: 8)
+  - ncb % previous year <= 42.5000  (Count: 3)
+  - ncb % previous year > 42.5000  (Count: 1)
+  - ncb % previous year > 35.0000  (Count: 1)
+
+Class 1:
+  - ncb % previous year <= 10.0000  (Count: 107)
+  - ncb % previous year > 10.0000  (Count: 101)
+  - ncb % previous year <= 30.0000  (Count: 93)
+  - ncb % previous year > 30.0000  (Count: 80)
+  - ncb % previous year <= 47.5000  (Count: 58)
+  - ncb % previous year > 47.5000  (Count: 42)
+  - ncb % previous year <= 40.0000  (Count: 21)
+  - ncb % previous year <= 60.0000  (Count: 18)
+  - ncb % previous year > 40.0000  (Count: 17)
+  - ncb % previous year <= 22.5000  (Count: 16)
+  - ncb % previous year > 22.5000  (Count: 13)
+  - ncb % previous year > 60.0000  (Count: 12)
+  - ncb % previous year <= 25.0000  (Count: 2)
+  - ncb % previous year <= 12.5000  (Count: 2)
+  - ncb % previous year <= 35.0000  (Count: 1)
+
+====================================================================================================
+
+Feature: applicable discount with ncb
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - applicable discount with ncb <= 81.0000  (Count: 108)
+  - applicable discount with ncb > 64.5000  (Count: 96)
+  - applicable discount with ncb > 81.0000  (Count: 91)
+  - applicable discount with ncb > 72.5000  (Count: 73)
+  - applicable discount with ncb > 70.5000  (Count: 65)
+  - applicable discount with ncb > 57.5000  (Count: 49)
+  - applicable discount with ncb > 53.5000  (Count: 47)
+  - applicable discount with ncb <= 64.5000  (Count: 45)
+  - applicable discount with ncb <= 77.5000  (Count: 42)
+  - applicable discount with ncb <= 72.5000  (Count: 42)
+  - applicable discount with ncb > 68.5000  (Count: 42)
+  - applicable discount with ncb <= 53.5000  (Count: 39)
+  - applicable discount with ncb <= 70.5000  (Count: 37)
+  - applicable discount with ncb > 77.5000  (Count: 37)
+  - applicable discount with ncb <= 57.5000  (Count: 34)
+
+Class 1:
+  - applicable discount with ncb <= 64.5000  (Count: 133)
+  - applicable discount with ncb <= 70.5000  (Count: 103)
+  - applicable discount with ncb > 81.0000  (Count: 102)
+  - applicable discount with ncb <= 72.5000  (Count: 89)
+  - applicable discount with ncb <= 81.0000  (Count: 85)
+  - applicable discount with ncb > 64.5000  (Count: 82)
+  - applicable discount with ncb <= 53.5000  (Count: 79)
+  - applicable discount with ncb > 70.5000  (Count: 75)
+  - applicable discount with ncb > 53.5000  (Count: 71)
+  - applicable discount with ncb <= 57.5000  (Count: 60)
+  - applicable discount with ncb > 72.5000  (Count: 60)
+  - applicable discount with ncb > 57.5000  (Count: 46)
+  - applicable discount with ncb <= 58.5000  (Count: 42)
+  - applicable discount with ncb <= 68.5000  (Count: 41)
+  - applicable discount with ncb > 58.5000  (Count: 41)
+
+====================================================================================================
+
+Feature: Number of claims
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - Number of claims <= 1.5000  (Count: 45)
+  - Number of claims <= 0.5000  (Count: 38)
+  - Number of claims > 1.5000  (Count: 27)
+  - Number of claims > 0.5000  (Count: 25)
+  - Number of claims > 2.5000  (Count: 3)
+  - Number of claims <= 2.5000  (Count: 2)
+  - Number of claims <= 3.5000  (Count: 1)
+  - Number of claims > 4.5000  (Count: 1)
+  - Number of claims > 3.5000  (Count: 1)
+
+Class 1:
+  - Number of claims > 1.5000  (Count: 79)
+  - Number of claims <= 1.5000  (Count: 59)
+  - Number of claims > 0.5000  (Count: 47)
+  - Number of claims <= 0.5000  (Count: 36)
+  - Number of claims <= 2.5000  (Count: 11)
+  - Number of claims > 2.5000  (Count: 10)
+  - Number of claims <= 3.5000  (Count: 5)
+  - Number of claims > 3.5000  (Count: 5)
+  - Number of claims <= 4.5000  (Count: 1)
+
+====================================================================================================
+
+Feature: approved
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - approved > 0.5000  (Count: 138)
+  - approved <= 0.5000  (Count: 120)
+  - approved > 1.5000  (Count: 58)
+  - approved <= 1.5000  (Count: 57)
+  - approved > 2.5000  (Count: 15)
+  - approved <= 2.5000  (Count: 8)
+  - approved > 3.5000  (Count: 3)
+  - approved <= 3.5000  (Count: 2)
+
+Class 1:
+  - approved <= 0.5000  (Count: 171)
+  - approved > 0.5000  (Count: 150)
+  - approved > 1.5000  (Count: 115)
+  - approved <= 1.5000  (Count: 103)
+  - approved <= 2.5000  (Count: 16)
+  - approved > 2.5000  (Count: 8)
+  - approved <= 3.5000  (Count: 4)
+  - approved > 3.5000  (Count: 1)
+
+====================================================================================================
+
+Feature: denied
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - denied <= 0.5000  (Count: 138)
+  - denied > 0.5000  (Count: 138)
+  - denied > 1.5000  (Count: 2)
+
+Class 1:
+  - denied <= 0.5000  (Count: 191)
+  - denied > 0.5000  (Count: 184)
+  - denied <= 1.5000  (Count: 3)
+  - denied > 1.5000  (Count: 1)
+
+====================================================================================================
+
+Feature: Policy Tenure
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - Policy Tenure <= 2.0000  (Count: 44)
+  - Policy Tenure > 2.0000  (Count: 23)
+
+Class 1:
+  - Policy Tenure > 2.0000  (Count: 80)
+  - Policy Tenure <= 2.0000  (Count: 62)
+
+====================================================================================================
+
+Feature: Customer Tenure
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - Customer Tenure <= 3.5000  (Count: 68)
+  - Customer Tenure > 3.5000  (Count: 61)
+  - Customer Tenure <= 6.5000  (Count: 43)
+  - Customer Tenure <= 2.5000  (Count: 41)
+  - Customer Tenure > 6.5000  (Count: 38)
+  - Customer Tenure > 5.5000  (Count: 33)
+  - Customer Tenure <= 5.5000  (Count: 30)
+  - Customer Tenure > 2.5000  (Count: 29)
+  - Customer Tenure <= 1.5000  (Count: 28)
+  - Customer Tenure > 1.5000  (Count: 22)
+  - Customer Tenure <= 2.0000  (Count: 11)
+  - Customer Tenure <= 4.5000  (Count: 9)
+  - Customer Tenure > 4.5000  (Count: 8)
+  - Customer Tenure > 8.5000  (Count: 4)
+  - Customer Tenure > 2.0000  (Count: 4)
+
+Class 1:
+  - Customer Tenure > 3.5000  (Count: 92)
+  - Customer Tenure <= 3.5000  (Count: 90)
+  - Customer Tenure > 6.5000  (Count: 73)
+  - Customer Tenure <= 6.5000  (Count: 68)
+  - Customer Tenure <= 5.5000  (Count: 58)
+  - Customer Tenure > 2.5000  (Count: 55)
+  - Customer Tenure > 5.5000  (Count: 50)
+  - Customer Tenure <= 2.5000  (Count: 43)
+  - Customer Tenure > 1.5000  (Count: 40)
+  - Customer Tenure <= 1.5000  (Count: 36)
+  - Customer Tenure <= 4.5000  (Count: 10)
+  - Customer Tenure > 4.5000  (Count: 9)
+  - Customer Tenure > 2.0000  (Count: 7)
+  - Customer Tenure <= 7.5000  (Count: 5)
+  - Customer Tenure <= 8.5000  (Count: 4)
+
+====================================================================================================
+
+Feature: policy_wise_purchase
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - policy_wise_purchase > 2.5000  (Count: 129)
+  - policy_wise_purchase <= 2.5000  (Count: 79)
+  - policy_wise_purchase > 3.5000  (Count: 53)
+  - policy_wise_purchase > 1.5000  (Count: 41)
+  - policy_wise_purchase <= 1.5000  (Count: 36)
+  - policy_wise_purchase <= 3.5000  (Count: 28)
+  - policy_wise_purchase > 2.0000  (Count: 2)
+  - policy_wise_purchase <= 2.0000  (Count: 1)
+  - policy_wise_purchase > 3.0000  (Count: 1)
+
+Class 1:
+  - policy_wise_purchase <= 2.5000  (Count: 154)
+  - policy_wise_purchase > 2.5000  (Count: 98)
+  - policy_wise_purchase <= 3.5000  (Count: 66)
+  - policy_wise_purchase <= 1.5000  (Count: 53)
+  - policy_wise_purchase > 1.5000  (Count: 46)
+  - policy_wise_purchase > 3.5000  (Count: 30)
+  - policy_wise_purchase <= 2.0000  (Count: 2)
+  - policy_wise_purchase <= 3.0000  (Count: 1)
+  - policy_wise_purchase > 2.0000  (Count: 1)
+
+====================================================================================================
+
+Feature: product name_Private Car Package Policy - 3 years
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - product name_Private Car Package Policy - 3 years <= 0.5000  (Count: 3)
+
+Class 1:
+  - product name_Private Car Package Policy - 3 years > 0.5000  (Count: 3)
+
+====================================================================================================
+
+Feature: product name_Private Car Policy - Bundled Cover
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - product name_Private Car Policy - Bundled Cover > 0.5000  (Count: 9)
+  - product name_Private Car Policy - Bundled Cover <= 0.5000  (Count: 5)
+
+Class 1:
+  - product name_Private Car Policy - Bundled Cover <= 0.5000  (Count: 9)
+  - product name_Private Car Policy - Bundled Cover > 0.5000  (Count: 4)
+
+====================================================================================================
+
+Feature: product name_PrivateCarLiability
+----------------------------------------------------------------------------------------------------
+Class 0:
+  (No splits for this class)
+
+Class 1:
+  (No splits for this class)
+
+====================================================================================================
+
+Feature: product name_PrivateCarPolicy
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - product name_PrivateCarPolicy <= 0.5000  (Count: 214)
+  - product name_PrivateCarPolicy > 0.5000  (Count: 140)
+
+Class 1:
+  - product name_PrivateCarPolicy > 0.5000  (Count: 283)
+  - product name_PrivateCarPolicy <= 0.5000  (Count: 222)
+
+====================================================================================================
+
+Feature: product name_PrivateCarStandaloneOD
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - product name_PrivateCarStandaloneOD <= 0.5000  (Count: 106)
+  - product name_PrivateCarStandaloneOD > 0.5000  (Count: 59)
+
+Class 1:
+  - product name_PrivateCarStandaloneOD > 0.5000  (Count: 151)
+  - product name_PrivateCarStandaloneOD <= 0.5000  (Count: 127)
+
+====================================================================================================
+
+Feature: product name_Standalone Own Damage Policy for Private Car
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - product name_Standalone Own Damage Policy for Private Car > 0.5000  (Count: 28)
+  - product name_Standalone Own Damage Policy for Private Car <= 0.5000  (Count: 18)
+
+Class 1:
+  - product name_Standalone Own Damage Policy for Private Car <= 0.5000  (Count: 43)
+  - product name_Standalone Own Damage Policy for Private Car > 0.5000  (Count: 31)
+
+====================================================================================================
+
+Feature: biztype_Renewal Business
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - biztype_Renewal Business > 0.5000  (Count: 384)
+  - biztype_Renewal Business <= 0.5000  (Count: 325)
+
+Class 1:
+  - biztype_Renewal Business <= 0.5000  (Count: 572)
+  - biztype_Renewal Business > 0.5000  (Count: 520)
+
+====================================================================================================
+
+Feature: biztype_Roll Over
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - biztype_Roll Over > 0.5000  (Count: 77)
+  - biztype_Roll Over <= 0.5000  (Count: 65)
+
+Class 1:
+  - biztype_Roll Over <= 0.5000  (Count: 84)
+  - biztype_Roll Over > 0.5000  (Count: 75)
+
+====================================================================================================
+
+Feature: tie up_EM Broker
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - tie up_EM Broker <= 0.5000  (Count: 178)
+  - tie up_EM Broker > 0.5000  (Count: 153)
+
+Class 1:
+  - tie up_EM Broker <= 0.5000  (Count: 204)
+  - tie up_EM Broker > 0.5000  (Count: 199)
+
+====================================================================================================
+
+Feature: tie up_EM Non OE Dealership
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - tie up_EM Non OE Dealership > 0.5000  (Count: 119)
+  - tie up_EM Non OE Dealership <= 0.5000  (Count: 55)
+
+Class 1:
+  - tie up_EM Non OE Dealership <= 0.5000  (Count: 129)
+  - tie up_EM Non OE Dealership > 0.5000  (Count: 68)
+
+====================================================================================================
+
+Feature: tie up_FORD
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - tie up_FORD <= 0.5000  (Count: 35)
+  - tie up_FORD > 0.5000  (Count: 25)
+
+Class 1:
+  - tie up_FORD > 0.5000  (Count: 60)
+  - tie up_FORD <= 0.5000  (Count: 50)
+
+====================================================================================================
+
+Feature: tie up_HONDA PV
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - tie up_HONDA PV <= 0.5000  (Count: 91)
+  - tie up_HONDA PV > 0.5000  (Count: 85)
+
+Class 1:
+  - tie up_HONDA PV > 0.5000  (Count: 113)
+  - tie up_HONDA PV <= 0.5000  (Count: 111)
+
+====================================================================================================
+
+Feature: tie up_HYUNDAI
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - tie up_HYUNDAI > 0.5000  (Count: 192)
+  - tie up_HYUNDAI <= 0.5000  (Count: 155)
+
+Class 1:
+  - tie up_HYUNDAI <= 0.5000  (Count: 247)
+  - tie up_HYUNDAI > 0.5000  (Count: 207)
+
+====================================================================================================
+
+Feature: tie up_JAWA
+----------------------------------------------------------------------------------------------------
+Class 0:
+  (No splits for this class)
+
+Class 1:
+  (No splits for this class)
+
+====================================================================================================
+
+Feature: tie up_JEEP
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - tie up_JEEP <= 0.5000  (Count: 84)
+  - tie up_JEEP > 0.5000  (Count: 72)
+
+Class 1:
+  - tie up_JEEP <= 0.5000  (Count: 116)
+  - tie up_JEEP > 0.5000  (Count: 88)
+
+====================================================================================================
+
+Feature: tie up_MARUTI
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - tie up_MARUTI <= 0.5000  (Count: 242)
+  - tie up_MARUTI > 0.5000  (Count: 209)
+
+Class 1:
+  - tie up_MARUTI > 0.5000  (Count: 339)
+  - tie up_MARUTI <= 0.5000  (Count: 313)
+
+====================================================================================================
+
+Feature: tie up_MIBL OEM
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - tie up_MIBL OEM <= 0.5000  (Count: 244)
+  - tie up_MIBL OEM > 0.5000  (Count: 191)
+
+Class 1:
+  - tie up_MIBL OEM > 0.5000  (Count: 273)
+  - tie up_MIBL OEM <= 0.5000  (Count: 227)
+
+====================================================================================================
+
+Feature: tie up_MIBL Others
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - tie up_MIBL Others <= 0.5000  (Count: 163)
+  - tie up_MIBL Others > 0.5000  (Count: 123)
+
+Class 1:
+  - tie up_MIBL Others <= 0.5000  (Count: 210)
+  - tie up_MIBL Others > 0.5000  (Count: 184)
+
+====================================================================================================
+
+Feature: tie up_Non-OEM
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - tie up_Non-OEM <= 0.5000  (Count: 124)
+  - tie up_Non-OEM > 0.5000  (Count: 85)
+
+Class 1:
+  - tie up_Non-OEM > 0.5000  (Count: 169)
+  - tie up_Non-OEM <= 0.5000  (Count: 126)
+
+====================================================================================================
+
+Feature: tie up_SKODA
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - tie up_SKODA <= 0.5000  (Count: 27)
+  - tie up_SKODA > 0.5000  (Count: 10)
+
+Class 1:
+  - tie up_SKODA <= 0.5000  (Count: 38)
+  - tie up_SKODA > 0.5000  (Count: 19)
+
+====================================================================================================
+
+Feature: tie up_TATA PV
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - tie up_TATA PV <= 0.5000  (Count: 133)
+  - tie up_TATA PV > 0.5000  (Count: 107)
+
+Class 1:
+  - tie up_TATA PV > 0.5000  (Count: 172)
+  - tie up_TATA PV <= 0.5000  (Count: 147)
+
+====================================================================================================
+
+Feature: tie up_VOLKSWAGEN
+----------------------------------------------------------------------------------------------------
+Class 0:
+  (No splits for this class)
+
+Class 1:
+  - tie up_VOLKSWAGEN <= 0.5000  (Count: 1)
+  - tie up_VOLKSWAGEN > 0.5000  (Count: 1)
+
+====================================================================================================
+
+Feature: New Customers_Yes
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - New Customers_Yes > 0.5000  (Count: 41)
+  - New Customers_Yes <= 0.5000  (Count: 33)
+
+Class 1:
+  - New Customers_Yes <= 0.5000  (Count: 48)
+  - New Customers_Yes > 0.5000  (Count: 39)
+
+====================================================================================================
+
+Feature: Claim Happaned/Not_Yes
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - Claim Happaned/Not_Yes <= 0.5000  (Count: 27)
+  - Claim Happaned/Not_Yes > 0.5000  (Count: 23)
+
+Class 1:
+  - Claim Happaned/Not_Yes > 0.5000  (Count: 28)
+  - Claim Happaned/Not_Yes <= 0.5000  (Count: 24)
+
+====================================================================================================
+
+Feature: Renewal Rate Status_Increase
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - Renewal Rate Status_Increase <= 0.5000  (Count: 34)
+  - Renewal Rate Status_Increase > 0.5000  (Count: 27)
+
+Class 1:
+  - Renewal Rate Status_Increase > 0.5000  (Count: 60)
+  - Renewal Rate Status_Increase <= 0.5000  (Count: 55)
+
+====================================================================================================
+
+Feature: Renewal Rate Status_No Change
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - Renewal Rate Status_No Change <= 0.5000  (Count: 4)
+  - Renewal Rate Status_No Change > 0.5000  (Count: 4)
+
+Class 1:
+  - Renewal Rate Status_No Change <= 0.5000  (Count: 4)
+  - Renewal Rate Status_No Change > 0.5000  (Count: 2)
+
+====================================================================================================
+
+Feature: Renewal Rate Status_Null
+----------------------------------------------------------------------------------------------------
+Class 0:
+  - Renewal Rate Status_Null > 0.5000  (Count: 34)
+  - Renewal Rate Status_Null <= 0.5000  (Count: 31)
+
+Class 1:
+  - Renewal Rate Status_Null <= 0.5000  (Count: 37)
+  - Renewal Rate Status_Null > 0.5000  (Count: 35)
+
+====================================================================================================
+

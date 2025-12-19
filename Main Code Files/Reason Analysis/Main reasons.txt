@@ -1,0 +1,17 @@
+age <= 1.0038  (Count: 78)
+age > 6.4663  (Count: 24)
+vehicle idv <= 405003.0000  (Count: 22)
+before gst add-on gwp > 6944.5000  (Count: 25)
+total od premium > 7790.5000  (Count: 18)
+total tp premium > 8268.5000  (Count: 30)
+ncb % previous year <= 10.0000  (Count: 107)
+applicable discount with ncb <= 64.5000  (Count: 133)
+Number of claims > 1.5000  (Count: 79)
+Claim Happaned/Not_Yes
+tie up_MARUTI
+tie up_MIBL OEM 
+tie up_HYUNDAI
+New Customers_Yes
+policy_wise_purchase <= 2.5000
+Policy Tenure > 2.0000
+tie up_Non-OEM
