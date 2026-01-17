@@ -1,0 +1,45 @@
+{
+  "common_config": {
+    "years_split": "4months"
+  },
+  "experiments": [
+    {
+      "algorithm": "naive_bayes",
+      "set": "set_1",
+      "split": "80/20",
+      "sampling": "undersample",
+      "params": {}
+    },
+ 
+    {
+      "algorithm": "naive_bayes",
+      "set": "set_1",
+      "split": "80/20",
+      "sampling": "SMOTE",
+      "params": {
+        "var_smoothing": 1e-9
+      }
+    },
+    {
+      "algorithm": "decision_tree",
+      "set": "set_1",
+      "split": "80/20",
+      "sampling": "undersample",
+      "params": {
+        "max_depth": 10,
+        "min_samples_split": 10
+      }
+    },
+    {
+      "algorithm": "decision_tree",
+      "set": "set_2",
+      "split": "70/30",
+      "sampling": "oversample",
+      "params": {
+        "max_depth": 20,
+        "min_samples_split": 5
+      }
+    }
+
+   ]
+}
