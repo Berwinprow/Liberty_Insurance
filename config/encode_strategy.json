@@ -1,0 +1,14 @@
+{
+  "logistic_regression": { "encoding": "label", "scaling": true },
+  "naive_bayes": { "encoding": "label", "scaling": true },
+  "decision_tree": { "encoding": "label", "scaling": false },
+  "random_forest": { "encoding": "label", "scaling": false },
+  "xgboost": { "encoding": "label", "scaling": false },
+  "lightgbm": { "encoding": "label", "scaling": false },
+  "catboost": { "encoding": "label", "scaling": false },
+  "gradient_boosting": { "encoding": "label", "scaling": false },
+  "adaboost": { "encoding": "label", "scaling": false },
+  "sgd": { "encoding": "label", "scaling": true },
+  "knn": { "encoding": "label", "scaling": true }
+}
+

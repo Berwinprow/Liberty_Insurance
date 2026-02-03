@@ -1,0 +1,10 @@
+{
+  "time_based_window": {
+    "year_column": "policy_end_date_year",
+    "month_column": "policy_end_date_month",
+    "validation": {
+      "year": 2024,
+      "months": [9,10,11,12]
+    }
+  }
+}

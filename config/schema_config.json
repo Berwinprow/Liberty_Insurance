@@ -1,0 +1,7 @@
+{
+  "schema": {
+    "bi_dwh": "pip_bi_dwh",
+    "target_feature_selection_schema": "feature_selection",
+    "model_selection_schema": "model_selection"
+  }
+}

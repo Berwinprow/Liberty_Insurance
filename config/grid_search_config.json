@@ -1,0 +1,34 @@
+{
+  "set_1": {
+    "enabled": true,
+    "splits": {
+      "80_20": {
+        "sampling": {
+          "none": {
+            "grid_models": [
+              "sgd",
+              "decision_tree"
+            ],
+            "dl_models": [
+              "rnn"
+            ]
+          },
+          "oversample": {
+            "grid_models": [
+              "naive_bayes"
+            ]
+          }
+        }
+      },
+      "70_30": {
+        "sampling": {
+          "none": {
+            "grid_models": [
+              "decision_tree"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

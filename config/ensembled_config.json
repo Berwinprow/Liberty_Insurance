@@ -1,0 +1,56 @@
+{
+  "set_1": {
+    "enabled": true,
+    "split": "80_20",
+
+    "sampling": {
+      "oversample": {
+        "weighted_ensemble": {
+          "models": {
+            "xgboost": {
+              "scaling": false,
+              "params": {
+                "max_depth": 6,
+                "n_estimators": 100,
+                "random_state": 42
+              }
+            },
+            "catboost": {
+              "scaling": false,
+              "params": {
+                "depth": 10,
+                "learning_rate": 0.1,
+                "iterations": 500,
+                "random_seed": 42,
+                "verbose": 0
+              }
+            },
+            "gradient_boosting": {
+              "scaling": false,
+              "params": {
+                "max_depth": 6,
+                "learning_rate": 0.1,
+                "n_estimators": 100,
+                "random_state": 42
+              }
+            }
+          },
+          "weightage": {
+            "xgboost": {
+              "class_0": 0.70,
+              "class_1": 0.30
+            },
+            "catboost": {
+              "class_0": 0.67,
+              "class_1": 0.33
+            },
+            "gradient_boosting": {
+              "class_0": 0.67,
+              "class_1": 0.33
+            }
+          }
+        }
+      }
+    }
+  }
+}

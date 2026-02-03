@@ -1,0 +1,39 @@
+{
+  "connection": {
+    "postgres_conn_id": "postgres_cloud_prochurn"
+  },
+
+  "tables": {
+    "source_table": "final_policy_feature_manclean",
+
+    "single_model_output_table": "ml_automation_models_output_final_table",
+    "ensemble_output_table": "ml_automation_ensembled_result",
+
+    "seven_set_ensembled_results": "ml_automation_7set_ensembled_results",
+    "threshold_optimization_results": "ml_automation_threshold_optimization_results",
+    "grid_search_results": "ml_automation_grid_search_results",
+    
+
+    "future_cv_results_table": "ml_future_cv_results",
+    "future_time_based_results_table": "ml_future_time_based_results",
+    "future_open_policy_results_table": "ml_future_open_policy_results"
+  },
+
+  "columns": {
+    "target_column": "policy_status",
+    "date_columns": [
+      "policy_start_date",
+      "policy_end_date"
+    ],
+    "target_mapping": {
+      "Renewed": 0,
+      "Not Renewed": 1
+    }
+  },
+
+  "future_prediction": {
+    "future_values": [
+      "Open"
+    ]
+  }
+}
