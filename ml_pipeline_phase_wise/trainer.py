@@ -1,5 +1,6 @@
 from datetime import datetime
 import pandas as pd
+import json
 
 from sklearn.base import clone
 from sklearn.metrics import (
@@ -17,6 +18,9 @@ from ml_pipeline_phase_wise.schema_table_config import get_schema
 from ml_pipeline_phase_wise.checkpoint_utils import already_trained
 
 
+CONFIG_PATH = "/opt/airflow/dags/config/connections_table_columns.json"
+
+
 def run_single_model(
     model_name,
     base_model,
@@ -27,8 +31,17 @@ def run_single_model(
     y_test,
     meta
 ):
-    hook = PostgresHook(postgres_conn_id="postgres_cloud_prochurn")
+    # ================= LOAD CONFIG =================
+    with open(CONFIG_PATH, "r") as f:
+        cfg = json.load(f)
+
+    CONNECTION_ID = cfg["connection"]["postgres_conn_id"]
+    OUTPUT_TABLE = cfg["tables"]["single_model_output_table"]
+
+    # ================= DB CONNECTION =================
+    hook = PostgresHook(postgres_conn_id=CONNECTION_ID)
     engine = hook.get_sqlalchemy_engine()
+
     schema = get_schema(
         "model_selection_schema",
         "/opt/airflow/dags/config/schema_config.json"
@@ -41,7 +54,7 @@ def run_single_model(
         sampling=meta["sampling"],
         model_name=model_name,
         params=params,
-        table_name="ml_automation_models_output_final_table"
+        table_name=OUTPUT_TABLE
     ):
         print(f"⏭️ SKIPPED | {model_name} | Params: {params}")
         return
@@ -117,7 +130,7 @@ def run_single_model(
         }
 
         pd.DataFrame([result]).to_sql(
-            "ml_automation_models_output_final_table",
+            OUTPUT_TABLE,
             engine,
             schema=schema,
             if_exists="append",

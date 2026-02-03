@@ -17,6 +17,9 @@ from ml_pipeline_phase_wise.schema_table_config import get_schema
 from ml_pipeline_phase_wise.checkpoint_utils import already_trained
 
 
+CONFIG_PATH = "/opt/airflow/dags/config/connections_table_columns.json"
+
+
 def run_ensemble(
     ensemble_name,
     model,
@@ -27,7 +30,15 @@ def run_ensemble(
     meta,
     cfg
 ):
-    hook = PostgresHook(postgres_conn_id="postgres_cloud_prochurn")
+    # ================= LOAD CONFIG =================
+    with open(CONFIG_PATH, "r") as f:
+        main_cfg = json.load(f)
+
+    CONNECTION_ID = main_cfg["connection"]["postgres_conn_id"]
+    OUTPUT_TABLE = main_cfg["tables"]["ensemble_output_table"]
+
+    # ================= DB CONNECTION =================
+    hook = PostgresHook(postgres_conn_id=CONNECTION_ID)
     engine = hook.get_sqlalchemy_engine()
 
     schema = get_schema(
@@ -44,7 +55,7 @@ def run_ensemble(
         sampling=meta["sampling"],
         model_name=ensemble_name,
         params=param_str,
-        table_name="ml_automation_ensembled_result"
+        table_name=OUTPUT_TABLE
     ):
         print(f"⏭️ SKIPPED ENSEMBLE | {ensemble_name}")
         return
@@ -116,7 +127,7 @@ def run_ensemble(
     }
 
     pd.DataFrame([result]).to_sql(
-        "ml_automation_ensembled_result",
+        OUTPUT_TABLE,
         engine,
         schema=schema,
         if_exists="append",

@@ -17,7 +17,6 @@ np.random.seed(SEED)
 import logging
 import warnings
 
-# Silence warnings routed through logging (Airflow specific)
 logging.getLogger().setLevel(logging.ERROR)
 logging.getLogger("py.warnings").setLevel(logging.ERROR)
 logging.getLogger("sklearn").setLevel(logging.ERROR)
@@ -55,10 +54,20 @@ from ml_pipeline_phase_wise.ensembled_library import (
 from ml_pipeline_phase_wise.ensemble_trainer import run_ensemble
 
 
+CONFIG_PATH = "/opt/airflow/dags/config/connections_table_columns.json"
+
+
 def run_phase2_pipeline():
 
     print("\n🚀 PHASE-2 PIPELINE STARTED")
 
+    # ================= LOAD CONFIG =================
+    with open(CONFIG_PATH, "r") as f:
+        cfg_main = json.load(f)
+
+    TARGET_COLUMN = cfg_main["columns"]["target_column"]
+
+    # ================= LOAD CONFIG FILES =================
     config = json.load(
         open("/opt/airflow/dags/config/ensembled_config.json")
     )
@@ -68,6 +77,7 @@ def run_phase2_pipeline():
         open("/opt/airflow/dags/config/selected_columns.json")
     )
 
+    # ================= FEATURE SET LOOP =================
     for fs_name, fs_cfg in config.items():
         if not fs_cfg["enabled"]:
             continue
@@ -75,8 +85,8 @@ def run_phase2_pipeline():
         print(f"\n📌 PHASE-2 | FEATURE SET → {fs_name}")
 
         df = process_features(base_df, feature_sets[fs_name])
-        X = df.drop("policy_status", axis=1)
-        y = df["policy_status"]
+        X = df.drop(TARGET_COLUMN, axis=1)
+        y = df[TARGET_COLUMN]
 
         X_tr, X_te, y_tr, y_te = train_test_split(
             X, y, test_size=0.2, stratify=y, random_state=42
@@ -84,6 +94,7 @@ def run_phase2_pipeline():
 
         X_tr_enc, X_te_enc = apply_label_encoding(X_tr, X_te)
 
+        # ================= SAMPLING LOOP =================
         for sampling, methods in fs_cfg["sampling"].items():
 
             print(f"\n🚀 PHASE-2 | SAMPLING → {sampling}")
@@ -101,6 +112,7 @@ def run_phase2_pipeline():
                 "sampling": sampling
             }
 
+            # ================= ENSEMBLE LOOP =================
             for name, cfg in methods.items():
 
                 print(f"\n🚀 ENSEMBLE START → {name.upper()}")

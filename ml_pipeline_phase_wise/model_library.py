@@ -127,7 +127,7 @@ MODEL_FIXED_PARAMS = {
 # DL GRID PARAMS (SAME STYLE)
 # ======================================================
 DL_MODEL_PARAM_GRIDS = {
-    "rnn": [{"epochs": [13], "batch_size": [256]}],
+    "rnn": [{"epochs": [2], "batch_size": [256]}],
     "lstm": [{"epochs": [14], "batch_size": [256]}],
     "gru": [{"epochs": [15], "batch_size": [256]}]
 }

@@ -1,5 +1,9 @@
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 from ml_pipeline_phase_wise.schema_table_config import get_schema
+import json
+
+
+CONFIG_PATH = "/opt/airflow/dags/config/connections_table_columns.json"
 
 
 def already_trained(
@@ -11,14 +15,23 @@ def already_trained(
     table_name,
     seven_set=None
 ):
-    hook = PostgresHook(postgres_conn_id="postgres_cloud_prochurn")
+    # ================= LOAD CONFIG =================
+    with open(CONFIG_PATH, "r") as f:
+        cfg = json.load(f)
+
+    CONNECTION_ID = cfg["connection"]["postgres_conn_id"]
+
+    # ================= DB CONNECTION =================
+    hook = PostgresHook(postgres_conn_id=CONNECTION_ID)
     engine = hook.get_sqlalchemy_engine()
 
+    # ================= GET SCHEMA =================
     schema = get_schema(
         "model_selection_schema",
         "/opt/airflow/dags/config/schema_config.json"
     )
 
+    # ================= CHECK QUERY =================
     query = f"""
         SELECT 1
         FROM {schema}.{table_name}
@@ -42,5 +55,6 @@ def already_trained(
         query += ' AND "7set_undersampling" = %(seven)s'
         params_dict["seven"] = seven_set
 
+    # ================= EXECUTE =================
     with engine.connect() as conn:
         return conn.execute(query, params_dict).fetchone() is not None

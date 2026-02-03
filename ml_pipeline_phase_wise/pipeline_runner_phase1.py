@@ -66,6 +66,9 @@ from ml_pipeline_phase_wise.checkpoint_utils import already_trained
 from ml_pipeline_phase_wise.schema_table_config import get_schema
 
 
+CONFIG_PATH = "/opt/airflow/dags/config/connections_table_columns.json"
+
+
 # ======================================================
 # HELPERS
 # ======================================================
@@ -121,6 +124,15 @@ def run_model_param_queue(
 # ======================================================
 def run_phase1_pipeline():
 
+    # ================= LOAD CONFIG =================
+    with open(CONFIG_PATH, "r") as f:
+        cfg = json.load(f)
+
+    CONNECTION_ID = cfg["connection"]["postgres_conn_id"]
+    TARGET_COLUMN = cfg["columns"]["target_column"]
+    OUTPUT_TABLE = cfg["tables"]["single_model_output_table"]
+
+    # ================= LOAD DATA =================
     base_df = load_and_clean_data()
 
     feature_sets = json.load(
@@ -134,8 +146,8 @@ def run_phase1_pipeline():
     split_name = "80_20"
 
     df = process_features(base_df, feature_sets[fs_name])
-    X = df.drop("policy_status", axis=1)
-    y = df["policy_status"]
+    X = df.drop(TARGET_COLUMN, axis=1)
+    y = df[TARGET_COLUMN]
 
     X_tr, X_te, y_tr, y_te = train_test_split(
         X,
@@ -148,7 +160,7 @@ def run_phase1_pipeline():
     # ================= ENCODING (ONCE) =================
     X_tr_enc, X_te_enc = apply_label_encoding(X_tr, X_te)
 
-    hook = PostgresHook(postgres_conn_id="postgres_cloud_prochurn")
+    hook = PostgresHook(postgres_conn_id=CONNECTION_ID)
     engine = hook.get_sqlalchemy_engine()
     schema = get_schema(
         "model_selection_schema",
@@ -167,7 +179,7 @@ def run_phase1_pipeline():
 
         X_tr_sc, X_te_sc = apply_scaling(X_s, X_te_enc, enable=True)
 
-        # ================= ML MODELS (UNCHANGED) =================
+        # ================= ML MODELS =================
         for group in MODEL_GROUPS:
             for model_name, base_model in group.items():
 
@@ -221,7 +233,7 @@ def run_phase1_pipeline():
                             sampling=sampling,
                             model_name=model_name,
                             params=params,
-                            table_name="ml_automation_models_output_final_table"
+                            table_name=OUTPUT_TABLE
                         ):
                             print(f"⏭️ SKIPPED DL | {model_name} | Params: {params}")
                             continue
@@ -236,7 +248,6 @@ def run_phase1_pipeline():
                                 metrics=["accuracy"]
                             )
 
-                            # TRAIN
                             model.fit(
                                 X_dl_tr,
                                 y_s.values,
@@ -245,14 +256,12 @@ def run_phase1_pipeline():
                                 verbose=0
                             )
 
-                            # TRAIN METRICS
                             y_train_prob = model.predict(X_dl_tr, verbose=0).ravel()
                             y_train_pred = (y_train_prob >= 0.5).astype(int)
                             tn_tr, fp_tr, fn_tr, tp_tr = confusion_matrix(
                                 y_s, y_train_pred
                             ).ravel()
 
-                            # TEST METRICS
                             y_test_prob = model.predict(X_dl_te, verbose=0).ravel()
                             y_test_pred = (y_test_prob >= 0.5).astype(int)
                             tn, fp, fn, tp = confusion_matrix(
@@ -304,7 +313,7 @@ def run_phase1_pipeline():
                             }
 
                             pd.DataFrame([result]).to_sql(
-                                "ml_automation_models_output_final_table",
+                                OUTPUT_TABLE,
                                 engine,
                                 schema=schema,
                                 if_exists="append",
