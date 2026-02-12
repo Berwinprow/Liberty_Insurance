@@ -1,0 +1,45 @@
+{
+  "set_1": {
+    "enabled": true,
+    "split": "80_20",
+    "sampling": {
+      "oversample": {
+        "weighted_ensemble": {
+          "models": {
+            "xgboost": {
+              "scaling": false,
+              "params": {
+                "max_depth": 4,
+                "n_estimators": 50,
+                "learning_rate": 0.2,
+                "subsample": 0.8,
+                "colsample_bytree": 0.8,
+                "random_state": 42
+              }
+            },
+            "catboost": {
+              "scaling": false,
+              "params": {
+                "depth": 6,
+                "learning_rate": 0.2,
+                "iterations": 200,
+                "random_seed": 42,
+                "verbose": 0
+              }
+            }
+          },
+          "weightage": {
+            "xgboost": {
+              "class_0": 0.70,
+              "class_1": 0.30
+            },
+            "catboost": {
+              "class_0": 0.67,
+              "class_1": 0.33
+            }
+          }
+        }
+      }
+    }
+  }
+}

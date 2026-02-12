@@ -1,0 +1,49 @@
+{
+  "feature_sets": ["set_1"],
+
+  "pipelines": [
+    {
+      "sampling": "oversampling",
+
+      "models": {
+        "random_forest": {
+          "type": "single",
+          "scaling": false,
+          "threshold": [0.65],
+          "params": [
+            {
+              "n_estimators": 50,
+              "max_depth": 4,
+              "min_samples_split": 20,
+              "random_state": 42
+            }
+          ]
+        },
+
+        "xgboost": {
+          "type": "single",
+          "scaling": false,
+          "threshold": [0.60],
+          "params": [
+            {
+              "max_depth": 3,
+              "n_estimators": 50,
+              "learning_rate": 0.1,
+              "subsample": 0.8,
+              "colsample_bytree": 0.8,
+              "random_state": 42
+            }
+          ]
+        }
+      }
+    }
+  ],
+
+  "splits": {
+    "80_20": { "cv": false },
+    "70_30": { "cv": false }
+  },
+
+  "time_based": { "cv": false },
+  "full": { "cv": false }
+}
