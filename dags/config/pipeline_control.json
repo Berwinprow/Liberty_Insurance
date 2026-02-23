@@ -6,31 +6,37 @@
       "sampling": "oversampling",
 
       "models": {
-        "random_forest": {
+        "gradient_boosting": {
           "type": "single",
           "scaling": false,
-          "threshold": [0.65],
+          "threshold": [0.5],
           "params": [
             {
-              "n_estimators": 50,
+              "n_estimators": 300,
+              "learning_rate": 0.05,
               "max_depth": 4,
-              "min_samples_split": 20,
-              "random_state": 42
-            }
-          ]
-        },
-
-        "xgboost": {
-          "type": "single",
-          "scaling": false,
-          "threshold": [0.60],
-          "params": [
-            {
-              "max_depth": 3,
-              "n_estimators": 50,
-              "learning_rate": 0.1,
               "subsample": 0.8,
-              "colsample_bytree": 0.8,
+              "random_state": 42
+            },
+            {
+              "n_estimators": 500,
+              "learning_rate": 0.03,
+              "max_depth": 3,
+              "subsample": 0.7,
+              "random_state": 42
+            },
+            {
+              "n_estimators": 250,
+              "learning_rate": 0.08,
+              "max_depth": 5,
+              "subsample": 0.9,
+              "random_state": 42
+            },
+            {
+              "n_estimators": 200,
+              "learning_rate": 0.1,
+              "max_depth": 3,
+              "subsample": 0.8,
               "random_state": 42
             }
           ]
@@ -44,6 +50,13 @@
     "70_30": { "cv": false }
   },
 
-  "time_based": { "cv": false },
-  "full": { "cv": false }
+  "time_based": {
+    "enable": false,
+    "cv": false
+  },
+
+  "full": {
+    "enable": true,
+    "cv": false
+  }
 }

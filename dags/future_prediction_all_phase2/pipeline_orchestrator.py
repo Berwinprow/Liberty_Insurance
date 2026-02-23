@@ -89,19 +89,23 @@ def run_future_pipeline():
         # ================= SPLIT LOOP =================
         for split_name in ["80_20", "70_30", "time_based", "full"]:
 
+            # -------- 80/20 --------
             if split_name == "80_20" and cfg["splits"]["80_20"]["cv"]:
                 X_tr, X_te, y_tr, y_te = split_80_20(X_labeled, y_labeled)
                 mode = "cv"
 
+            # -------- 70/30 --------
             elif split_name == "70_30" and cfg["splits"]["70_30"]["cv"]:
                 X_tr, X_te, y_tr, y_te = split_70_30(X_labeled, y_labeled)
                 mode = "cv"
 
-            elif split_name == "time_based":
+            # -------- TIME BASED --------
+            elif split_name == "time_based" and cfg["time_based"]["enable"]:
                 X_tr, X_te, y_tr, y_te = time_based_split(X_labeled, y_labeled)
                 mode = "time"
 
-            elif split_name == "full":
+            # -------- FULL OPEN --------
+            elif split_name == "full" and cfg["full"]["enable"]:
                 X_tr, y_tr = full_train_split(X_labeled, y_labeled)
                 X_te, y_te = None, None
                 mode = "full"
